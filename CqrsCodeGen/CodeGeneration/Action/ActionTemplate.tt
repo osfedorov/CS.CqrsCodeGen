@@ -1,0 +1,19 @@
+<#@ template language="C#" #>
+using CS.Sdk.Commons.Models;
+using MediatR;
+
+namespace <#= Config.Namespace #>;
+
+public sealed class <#= Config.ClassName #> : IRequest<<#= Config.ResponseType #>>
+{
+<#
+    
+for(int i = 0; i < Config.Properties.Count; i++)
+{
+    var ppt = Config.Properties[i];
+#>
+    public <#= ppt.Type #> <#= ppt.Name #> { get; init;}
+<#
+}
+#>
+}

@@ -1,0 +1,28 @@
+<#@ template language="C#" #>
+
+using <#= Config.Project #>.DataAccess;
+using CS.Sdk.Commons.Models;
+using Mapster;
+using MediatR;
+using Microsoft.Extensions.Logging;
+
+namespace <#= Config.Namespace #>;
+
+internal sealed class <#= Config.ClassName #> : IRequestHandler<<#= Config.Command #>, <#= Config.ResponseType #>>
+{
+    private readonly IUnitOfWork _uow;
+    private readonly ILogger<<#= Config.ClassName #>> _logger;
+
+    public <#= Config.ClassName #>(
+        IUnitOfWork uow,
+        ILogger<<#= Config.ClassName #>> logger)
+    {
+        _uow = uow;
+        _logger = logger;
+    }
+
+    public async Task<<#= Config.ResponseType #>> Handle(<#= Config.Command #> request, CancellationToken cancellationToken)
+    {
+        return <#= Config.ResponseType #>.Ok();
+    }
+}
