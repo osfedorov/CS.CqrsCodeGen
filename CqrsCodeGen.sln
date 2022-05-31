@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsCodeGen", "CqrsCodeGen\CqrsCodeGen.csproj", "{34ECDFFE-53BA-4ECF-8687-151EE0F37F3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.Launcher", "Console.Launcher\Console.Launcher.csproj", "{B9EAB476-9E3F-4CCE-ABB4-49B2DC632069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console.Launcher", "Console.Launcher\Console.Launcher.csproj", "{B9EAB476-9E3F-4CCE-ABB4-49B2DC632069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.Launcher", "WinForms.Launcher\WinForms.Launcher.csproj", "{A2D80788-8C45-4BD2-AB38-8F7A029A3774}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B9EAB476-9E3F-4CCE-ABB4-49B2DC632069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9EAB476-9E3F-4CCE-ABB4-49B2DC632069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9EAB476-9E3F-4CCE-ABB4-49B2DC632069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D80788-8C45-4BD2-AB38-8F7A029A3774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D80788-8C45-4BD2-AB38-8F7A029A3774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D80788-8C45-4BD2-AB38-8F7A029A3774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D80788-8C45-4BD2-AB38-8F7A029A3774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
