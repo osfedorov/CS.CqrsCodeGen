@@ -12,12 +12,11 @@ public abstract class ViewModelBase : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    protected void FirePropertyChangedEvent([CallerMemberName] string propertyName = "")
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
+    #endregion INotifyPropertyChanged Members
 
-    #endregion
+    protected virtual void OnPropertyChanged(string pptName)
+    {
+    }
 
     protected void SetWhenNotEqual(object value, [CallerMemberName] string pptName = "")
     {
@@ -47,5 +46,11 @@ public abstract class ViewModelBase : INotifyPropertyChanged
 
         backingField.SetValue(this, value);
         FirePropertyChangedEvent(pptName);
+    }
+
+    private void FirePropertyChangedEvent([CallerMemberName] string propertyName = "")
+    {
+        OnPropertyChanged(propertyName);
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

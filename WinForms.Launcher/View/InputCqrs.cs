@@ -7,16 +7,18 @@ public partial class InputCqrs : UserControl
         InitializeComponent();
 
         gridMainSection.DataSource = configuration.MainSection;
-        gridDtoSection.DataSource = configuration.DtoSection;
+        gridMainSection.EditMode = DataGridViewEditMode.EditOnEnter;
+
+        requestPropertiesView.DataSource = configuration.RequestProperties;
     }
 
-    private void gridMainSection_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+    private void gridMainSection_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
     {
-        DataGridViewTextBoxEditingControl te =
-(DataGridViewTextBoxEditingControl)e.Control;
-        te.AutoCompleteMode = AutoCompleteMode.Append;
-        te.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        te.AutoCompleteCustomSource.AddRange(new string[] {"one", "two",
-"three"});
+        foreach (int row in configuration.GetMainSectionDelimiterIndices())
+        {
+            gridMainSection.Rows[row].DividerHeight = 2;
+        }
+
+        gridMainSection.Columns[gridMainSection.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
     }
 }

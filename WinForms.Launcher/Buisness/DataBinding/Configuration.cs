@@ -5,17 +5,25 @@ namespace WinForms.Launcher.Buisness.DataBinding;
 
 internal sealed partial class Configuration : Component
 {
+    private static readonly NameValue _business = new NameValue("Business namespace");
+    private static readonly NameValue _dto = new NameValue("Dto namespace");
+
     public BindingList<NameValue> MainSection { get; } = new()
     {
         new NameValue("Method name"),
         new ActionTypeVm("Type", "command"),
-        new NameValue("Project")
+        new NameValue("Project"),
+        
+        _business,
+
+        _dto,
+        new NameValue("Service name"),
     };
 
-    public BindingList<NameValue> DtoSection { get; } = new()
+    private IEnumerable<NameValue> _delimiters = new[] { _business, _dto};
+
+    public BindingList<PropertyVm> RequestProperties { get; } = new()
     {
-        new NameValue("Service name"),
-        new NameValue("Dto namespace"),
     };
 
     public Configuration()
@@ -28,5 +36,15 @@ internal sealed partial class Configuration : Component
         container.Add(this);
 
         InitializeComponent();
+    }
+
+    public IReadOnlyCollection<int> GetMainSectionDelimiterIndices()
+    {
+        return _delimiters.Select(row =>
+            {
+                int index = MainSection.IndexOf(row) - 1;
+                return index < 0 ? 0 : index;
+            })
+            .ToList();
     }
 }

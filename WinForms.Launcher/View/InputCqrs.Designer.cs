@@ -30,11 +30,10 @@ partial class InputCqrs
     {
             this.components = new System.ComponentModel.Container();
             this.layoutMain = new System.Windows.Forms.TableLayoutPanel();
-            this.gridDtoSection = new System.Windows.Forms.DataGridView();
             this.gridMainSection = new System.Windows.Forms.DataGridView();
+            this.requestPropertiesView = new WinForms.Launcher.View.PropertiesInputGridView();
             this.configuration = new WinForms.Launcher.Buisness.DataBinding.Configuration(this.components);
             this.layoutMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDtoSection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainSection)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,8 +42,8 @@ partial class InputCqrs
             this.layoutMain.ColumnCount = 1;
             this.layoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutMain.Controls.Add(this.gridDtoSection, 0, 1);
             this.layoutMain.Controls.Add(this.gridMainSection, 0, 0);
+            this.layoutMain.Controls.Add(this.requestPropertiesView, 0, 1);
             this.layoutMain.Location = new System.Drawing.Point(3, 3);
             this.layoutMain.Name = "layoutMain";
             this.layoutMain.RowCount = 2;
@@ -52,18 +51,6 @@ partial class InputCqrs
             this.layoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layoutMain.Size = new System.Drawing.Size(608, 399);
             this.layoutMain.TabIndex = 0;
-            // 
-            // gridDtoSection
-            // 
-            this.gridDtoSection.AllowUserToAddRows = false;
-            this.gridDtoSection.AllowUserToDeleteRows = false;
-            this.gridDtoSection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDtoSection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridDtoSection.Location = new System.Drawing.Point(3, 202);
-            this.gridDtoSection.Name = "gridDtoSection";
-            this.gridDtoSection.RowTemplate.Height = 25;
-            this.gridDtoSection.Size = new System.Drawing.Size(602, 194);
-            this.gridDtoSection.TabIndex = 1;
             // 
             // gridMainSection
             // 
@@ -76,7 +63,15 @@ partial class InputCqrs
             this.gridMainSection.RowTemplate.Height = 25;
             this.gridMainSection.Size = new System.Drawing.Size(602, 193);
             this.gridMainSection.TabIndex = 0;
-            this.gridMainSection.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.gridMainSection_EditingControlShowing);
+            this.gridMainSection.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.gridMainSection_DataBindingComplete);
+            // 
+            // requestPropertiesView
+            // 
+            this.requestPropertiesView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.requestPropertiesView.Location = new System.Drawing.Point(3, 202);
+            this.requestPropertiesView.Name = "requestPropertiesView";
+            this.requestPropertiesView.Size = new System.Drawing.Size(602, 194);
+            this.requestPropertiesView.TabIndex = 1;
             // 
             // InputCqrs
             // 
@@ -86,7 +81,6 @@ partial class InputCqrs
             this.Name = "InputCqrs";
             this.Size = new System.Drawing.Size(951, 577);
             this.layoutMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridDtoSection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMainSection)).EndInit();
             this.ResumeLayout(false);
 
@@ -96,6 +90,6 @@ partial class InputCqrs
 
     private TableLayoutPanel layoutMain;
     private Buisness.DataBinding.Configuration configuration;
-    private DataGridView gridDtoSection;
     private DataGridView gridMainSection;
+    private PropertiesInputGridView requestPropertiesView;
 }
