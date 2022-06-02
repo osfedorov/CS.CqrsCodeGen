@@ -1,6 +1,6 @@
 <#@ template language="C#" #>
 
-using <#= Config.Project #>.DataAccess;
+using <#= Config.DataAccess #>;
 using CS.Sdk.Commons.Models;
 using Mapster;
 using MediatR;

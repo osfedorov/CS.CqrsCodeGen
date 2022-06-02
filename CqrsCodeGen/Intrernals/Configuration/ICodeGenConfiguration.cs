@@ -1,23 +1,18 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using CqrsCodeGen.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CqrsCodeGen.Intrernals.Configuration;
 
 internal interface ICodeGenConfiguration
 {
-    /// <summary>
-    ///  The start portion of the namespace: CS.{Project}
-    /// </summary>
-    string BaseNamespace { get; init; }
-    string OutputPath { get; init; }
+    string OutputPath { get; }
+    INamespaceConfig NamespaceConfig { get; }
 
-    ActionConfig Action { get; init; }
-    ActionResponseModelConfig ActionResponse { get; init; }
-    ActionHandlerConfig ActionHandler { get; init; }
+    ActionConfig Action { get; }
+    ActionResponseModelConfig ActionResponse { get; }
+    ActionHandlerConfig ActionHandler { get; }
 
-    [MaybeNull]
-    string GrpcServiceName { get; init; }
-
-    GrpcServiceConfig GrpcService { get; init; }
-    DtoConfig RequestDto { get; init; }
-    DtoConfig ResponseDto { get; init; }
+    GrpcServiceConfig GrpcService { get; }
+    DtoConfig RequestDto { get; }
+    DtoConfig ResponseDto { get; }
 }

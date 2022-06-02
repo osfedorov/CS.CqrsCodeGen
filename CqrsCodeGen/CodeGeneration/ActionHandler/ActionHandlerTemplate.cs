@@ -15,7 +15,7 @@ namespace CqrsCodeGen.CodeGeneration.ActionHandler
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+    #line 1 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
     public partial class ActionHandlerTemplate : ActionHandlerTemplateBase
     {
@@ -27,57 +27,57 @@ namespace CqrsCodeGen.CodeGeneration.ActionHandler
         {
             this.Write("\r\nusing ");
             
-            #line 3 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(Config.Project));
+            #line 3 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Config.DataAccess));
             
             #line default
             #line hidden
-            this.Write(".DataAccess;\r\nusing CS.Sdk.Commons.Models;\r\nusing Mapster;\r\nusing MediatR;\r\nusing" +
-                    " Microsoft.Extensions.Logging;\r\n\r\nnamespace ");
+            this.Write(";\r\nusing CS.Sdk.Commons.Models;\r\nusing Mapster;\r\nusing MediatR;\r\nusing Microsoft." +
+                    "Extensions.Logging;\r\n\r\nnamespace ");
             
-            #line 9 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 9 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Namespace));
             
             #line default
             #line hidden
             this.Write(";\r\n\r\ninternal sealed class ");
             
-            #line 11 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 11 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ClassName));
             
             #line default
             #line hidden
             this.Write(" : IRequestHandler<");
             
-            #line 11 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 11 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Command));
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 11 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 11 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ResponseType));
             
             #line default
             #line hidden
             this.Write(">\r\n{\r\n    private readonly IUnitOfWork _uow;\r\n    private readonly ILogger<");
             
-            #line 14 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 14 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ClassName));
             
             #line default
             #line hidden
             this.Write("> _logger;\r\n\r\n    public ");
             
-            #line 16 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 16 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ClassName));
             
             #line default
             #line hidden
             this.Write("(\r\n        IUnitOfWork uow,\r\n        ILogger<");
             
-            #line 18 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 18 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ClassName));
             
             #line default
@@ -85,21 +85,21 @@ namespace CqrsCodeGen.CodeGeneration.ActionHandler
             this.Write("> logger)\r\n    {\r\n        _uow = uow;\r\n        _logger = logger;\r\n    }\r\n\r\n    pu" +
                     "blic async Task<");
             
-            #line 24 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 24 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ResponseType));
             
             #line default
             #line hidden
             this.Write("> Handle(");
             
-            #line 24 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 24 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Command));
             
             #line default
             #line hidden
             this.Write(" request, CancellationToken cancellationToken)\r\n    {\r\n        return ");
             
-            #line 26 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
+            #line 26 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\ActionHandler\ActionHandlerTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ResponseType));
             
             #line default

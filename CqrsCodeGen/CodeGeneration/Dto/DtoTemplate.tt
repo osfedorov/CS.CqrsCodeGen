@@ -11,7 +11,7 @@ for(int i = 0; i < Config.Properties.Count; i++)
 {
     var ppt = Config.Properties[i];
 #>
-    [DataMember(Order = <#= i + 1 #>)] public <#= ppt.Type #> <#= ppt.Name #> { get; init;}
+    [DataMember(Order = <#= i + 1 #>)] public <#= ppt.Type #> <#= ppt.Name #> { get; init; }
 <#
 }
 #>

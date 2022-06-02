@@ -6,6 +6,7 @@ namespace Console.Launcher;
 internal class CodeGenConfigSource : ICodeGenConfigurationSource
 {
     public string OutputPath { get; }
+    public string TargetLocation { get; }
     public string Project { get; }
     public string GrpcServiceName { get; }
     public string MethodName { get; }
@@ -23,7 +24,7 @@ internal class CodeGenConfigSource : ICodeGenConfigurationSource
     public CodeGenConfigSource(IConfiguration configuration)
     {
         OutputPath = configuration["Output:Path"];
-
+        TargetLocation = configuration["Base:TargetLocation"];
         MethodName = configuration["Base:MethodName"];
         Project = configuration["Base:Project"];
         GrpcServiceName = configuration["Base:Service"];

@@ -15,7 +15,7 @@ namespace CqrsCodeGen.CodeGeneration.Dto
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+    #line 1 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
     public partial class DtoTemplate : DtoTemplateBase
     {
@@ -27,27 +27,27 @@ namespace CqrsCodeGen.CodeGeneration.Dto
         {
             this.Write(" \r\nusing System.Runtime.Serialization;\r\nnamespace ");
             
-            #line 4 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 4 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Namespace));
             
             #line default
             #line hidden
             this.Write(";\r\n\r\n[DataContract]\r\npublic sealed class ");
             
-            #line 7 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 7 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.BaseName));
             
             #line default
             #line hidden
             
-            #line 7 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 7 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ClassSuffix));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n");
             
-            #line 9 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 9 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
 
 for(int i = 0; i < Config.Properties.Count; i++)
 {
@@ -58,28 +58,28 @@ for(int i = 0; i < Config.Properties.Count; i++)
             #line hidden
             this.Write("    [DataMember(Order = ");
             
-            #line 14 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 14 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(i + 1));
             
             #line default
             #line hidden
             this.Write(")] public ");
             
-            #line 14 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 14 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ppt.Type));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 14 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 14 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ppt.Name));
             
             #line default
             #line hidden
-            this.Write(" { get; init;}\r\n");
+            this.Write(" { get; init; }\r\n");
             
-            #line 15 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
+            #line 15 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\Dto\DtoTemplate.tt"
 
 }
 

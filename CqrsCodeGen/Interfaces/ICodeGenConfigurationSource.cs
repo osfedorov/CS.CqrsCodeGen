@@ -5,7 +5,8 @@ namespace CqrsCodeGen.Interfaces;
 public interface ICodeGenConfigurationSource
 {
     [NotNull] string OutputPath => "Generated";
-
+    [MaybeNull] string TargetLocation { get; }
+    
     [NotNull] string Project { get; }
     [MaybeNull] string GrpcServiceName { get; }
     [NotNull] string MethodName { get; }

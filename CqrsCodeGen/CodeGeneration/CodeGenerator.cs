@@ -40,7 +40,7 @@ internal sealed class CodeGenerator : ICodeGenerator
         File.WriteAllText(GetPath(_configuration.Action), action.TransformText());
         File.WriteAllText(GetPath(_configuration.ActionHandler), actionHandler.TransformText());
 
-        if (!string.IsNullOrEmpty(_configuration.GrpcServiceName))
+        if (!string.IsNullOrEmpty(_configuration.GrpcService.ClassName))
         {
             File.WriteAllText(GetPath(_configuration.RequestDto), request.TransformText());
             File.WriteAllText(GetPath(_configuration.ResponseDto), response.TransformText());

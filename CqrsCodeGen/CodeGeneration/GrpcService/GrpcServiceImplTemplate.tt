@@ -1,7 +1,7 @@
 ﻿<#@ template language="C#" #>
 
 public ValueTask<<#= Config.ReturnGenericType #><<#= Config.ResponseDto #>>> <#= Config.BaseName #>(
-    <#= Config.Request #>) request, CancellationToken cancellationToken = default)
+    <#= Config.Request #> request, CancellationToken cancellationToken = default)
 {
     return Mediate<<#= Config.Request #>, <#= Config.Action #>, <#= Config.ActionResponse #>, <#= Config.ResponseDto #>>(request,
         cancellationToken);

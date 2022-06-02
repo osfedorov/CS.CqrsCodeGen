@@ -15,7 +15,7 @@ namespace CqrsCodeGen.CodeGeneration.GrpcService
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+    #line 1 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "17.0.0.0")]
     public partial class GrpcServiceImplTemplate : GrpcServiceImplTemplateBase
     {
@@ -27,57 +27,56 @@ namespace CqrsCodeGen.CodeGeneration.GrpcService
         {
             this.Write("\r\npublic ValueTask<");
             
-            #line 3 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 3 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ReturnGenericType));
             
             #line default
             #line hidden
             this.Write("<");
             
-            #line 3 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 3 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ResponseDto));
             
             #line default
             #line hidden
             this.Write(">> ");
             
-            #line 3 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 3 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.BaseName));
             
             #line default
             #line hidden
             this.Write("(\r\n    ");
             
-            #line 4 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 4 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Request));
             
             #line default
             #line hidden
-            this.Write(") request, CancellationToken cancellationToken = default)\r\n{\r\n    return Mediate<" +
-                    "");
+            this.Write(" request, CancellationToken cancellationToken = default)\r\n{\r\n    return Mediate<");
             
-            #line 6 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 6 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Request));
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 6 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 6 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.Action));
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 6 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 6 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ActionResponse));
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 6 "C:\Users\Admin\source\repos\CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
+            #line 6 "C:\Users\Admin\Source\Repos\CS.CqrsCodeGen\CqrsCodeGen\CodeGeneration\GrpcService\GrpcServiceImplTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Config.ResponseDto));
             
             #line default

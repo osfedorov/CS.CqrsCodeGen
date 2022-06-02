@@ -1,6 +1,5 @@
 <#@ template language="C#" #>
  
-using System.Runtime.Serialization;
 namespace <#= Config.Namespace #>;
 
 public sealed class <#= Config.BaseName #><#= Config.Name #>
@@ -11,7 +10,7 @@ for(int i = 0; i < Config.Properties.Count; i++)
 {
     var ppt = Config.Properties[i];
 #>
-    public <#= ppt.Type #> <#= ppt.Name #> { get; init;}
+    public <#= ppt.Type #> <#= ppt.Name #> { get; init; }
 <#
 }
 #>
