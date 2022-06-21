@@ -4,5 +4,5 @@ public enum ResponseGenericType
 {
     Result,
     ResultList,
-    PageResult
+    PagedResult
 }

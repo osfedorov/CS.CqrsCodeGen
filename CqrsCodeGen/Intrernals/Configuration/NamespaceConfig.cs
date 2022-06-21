@@ -117,7 +117,7 @@ internal class NamespaceConfig : INamespaceConfig
         };
 
         return businessNamespace
-            .AddNamespace(actionNspaceChunk)
+            //.AddNamespace(actionNspaceChunk)
             .AddNamespace(cfg.MethodName);
     }
 }

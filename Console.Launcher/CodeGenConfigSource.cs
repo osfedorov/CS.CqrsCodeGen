@@ -43,7 +43,7 @@ internal class CodeGenConfigSource : ICodeGenConfigurationSource
         {
             "result" => ResponseGenericType.Result,
             "list" or "resultlist" => ResponseGenericType.ResultList,
-            "page" or "pageResult" => ResponseGenericType.PageResult,
+            "page" or "pagedresult" => ResponseGenericType.PagedResult,
             _ => throw new NotSupportedException($"Generic result type \"{configuration["Action:ResultGenericType"]}\" not supported")
         };
 
